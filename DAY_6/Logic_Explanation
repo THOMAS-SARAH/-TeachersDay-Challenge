@@ -1,0 +1,15 @@
+LeetCode Problem: 20 (Valid Parenthesis) 
+Link: https://leetcode.com/problems/valid-parentheses/submissions/1716526908/
+
+Short Explanation:
+This code checks if a string of parentheses ((), {}, []) is valid—meaning all opening brackets are correctly matched and closed in order.
+
+How it works:
+
+It uses a stack (stk) to keep track of opening brackets.
+For each character:
+If it's an opening bracket, push it onto the stack.
+If it's a closing bracket, check if the top of the stack matches it:
+If the stack is empty or doesn't match, return false.
+At the end, return true only if the stack is empty (all brackets matched and closed).
+This ensures every opener has a proper, timely closer.
