@@ -1,1 +1,4 @@
-
+Explanation:
+The watermelon weight must be split into two parts, both positive and both even.
+The only even numbers split that satisfy this condition are when w is even and greater than 2.
+So if w is even and w > 2, print YES, otherwise print NO.
