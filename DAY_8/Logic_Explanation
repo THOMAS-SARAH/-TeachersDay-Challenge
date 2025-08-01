@@ -1,1 +1,9 @@
+How it works:
 
+Reads the number of words n.
+
+For each word:
+
+If the word's length is strictly more than 10, prints the abbreviation: first letter + (letters in between) + last letter.
+
+Otherwise, prints the word as is.
