@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class StringTask {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+
+        // Vowels to be removed (both upper and lower case)
+        String vowels = "aoyeuiAOYEUI";
+        StringBuilder result = new StringBuilder();
+
+        // Iterate over each character
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            // Check if current char is NOT a vowel
+            if (vowels.indexOf(ch) == -1) {
+                // Convert to lowercase if not already
+                char lowerCh = Character.toLowerCase(ch);
+                // Add '.' and the consonant
+                result.append('.').append(lowerCh);
+            }
+        }
+
+        System.out.println(result.toString());
+    }
+}
