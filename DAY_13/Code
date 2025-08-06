@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class HelpfulMaths {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String s = scanner.nextLine();  // Input string like "3+2+1+3"
+        scanner.close();
+
+        // Split the input by '+' to get the numbers
+        String[] numbers = s.split("\\+");
+
+        // Count frequency of 1s, 2s, and 3s
+        int count1 = 0, count2 = 0, count3 = 0;
+        for (String num : numbers) {
+            switch (num) {
+                case "1":
+                    count1++;
+                    break;
+                case "2":
+                    count2++;
+                    break;
+                case "3":
+                    count3++;
+                    break;
+            }
+        }
+
+        // Build output string in non-decreasing order
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < count1; i++) {
+            if (result.length() > 0) {
+                result.append("+");
+            }
+            result.append("1");
+        }
+        for (int i = 0; i < count2; i++) {
+            if (result.length() > 0) {
+                result.append("+");
+            }
+            result.append("2");
+        }
+        for (int i = 0; i < count3; i++) {
+            if (result.length() > 0) {
+                result.append("+");
+            }
+            result.append("3");
+        }
+
+        System.out.println(result.toString());
+    }
+}
