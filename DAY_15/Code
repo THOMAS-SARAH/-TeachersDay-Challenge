@@ -1,1 +1,24 @@
+import java.util.Scanner;
+
+public class StonesOnTheTable {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();  // number of stones
+        String s = sc.next();  // colors string
+        
+        int removals = 0;
+        
+        // Compare each stone with the next one
+        for (int i = 0; i < n - 1; i++) {
+            if (s.charAt(i) == s.charAt(i + 1)) {
+                removals++;
+            }
+        }
+        
+        System.out.println(removals);
+        
+        sc.close();
+    }
+}
 
