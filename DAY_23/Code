@@ -1,1 +1,19 @@
+import java.util.Scanner;
+
+public class SoldierAndBananas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int k = scanner.nextInt(); // cost of the first banana
+        int n = scanner.nextInt(); // initial dollars
+        int w = scanner.nextInt(); // number of bananas
+
+        // Total cost calculation: sum of arithmetic series
+        int totalCost = k * w * (w + 1) / 2;
+
+        int borrow = totalCost - n;
+        if (borrow < 0) borrow = 0;
+
+        System.out.println(borrow);
+    }
+}
 
